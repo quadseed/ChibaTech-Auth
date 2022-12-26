@@ -38,11 +38,11 @@ export const getUserInfo = async (googleCallbackCode: string) => {
   if (user.email?.endsWith('@s.chibakoudai.jp')) {
     const studentId = user.email.substring(1, 8)
 
-    const enrollmentYear = Number('20' + studentId.substring(0, 3))
+    const enrollmentYear = Number('20' + studentId.substring(0, 2))
     const studentNumber = Number(studentId.substring(4))
 
-    const facultyId = studentId.substring(2, 4)
-    const departmentId = Number(studentId.substring(3, 5))
+    const facultyId = studentId.substring(2, 3)
+    const departmentId = Number(studentId.substring(3, 4))
 
     const response: Student = {
       type: 'student',
