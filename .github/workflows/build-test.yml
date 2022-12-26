@@ -1,0 +1,27 @@
+name: Build Test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile
+      
+      - name: Build for CommonJS
+        run: yarn run build:common
+
+      - name: Build For ESM
+        run: yarn run build:esm
