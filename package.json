@@ -23,7 +23,6 @@
   "bugs": {
     "url": "https://github.com/quadseed/ChibaTech-Auth/issues"
   },
-  "homepage": "https://github.com/quadseed/ChibaTech-Auth#readme",
   "dependencies": {
     "googleapis": "^110.0.0"
   },
