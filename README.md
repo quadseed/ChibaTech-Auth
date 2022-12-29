@@ -41,9 +41,6 @@ const userData = await getUserInfo(code)
 ```
 
 
-#### Japanese
-Google OAuthを利用して本人確認を行い、メールアドレスから学生情報を解析してその情報をJsonで返却します
-
 ## インストール
 ```shell
 # npm
@@ -54,6 +51,8 @@ $ yarn add chibatech-auth
 ```
 
 ## 使用方法
+Google OAuthを利用して本人確認を行い、メールアドレスから学生情報を解析してその情報をJsonで返却します
+
 ### 環境変数にGoogle OAuthの認証情報を設定
 ```
 # .env
